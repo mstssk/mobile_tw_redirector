@@ -16,7 +16,10 @@ public class Redirection extends Activity {
         String url = getIntent().getData().toString();
         String newUrl = url.replaceFirst("mobile.", "");
         Toast.makeText(getApplicationContext(), newUrl, Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(newUrl)));
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(newUrl));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
 
         finish();
     }
