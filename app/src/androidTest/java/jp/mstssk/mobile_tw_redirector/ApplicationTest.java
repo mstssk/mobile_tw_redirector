@@ -1,4 +1,4 @@
-package jp.mstssk.mtr.mobiletw_redirection;
+package jp.mstssk.mobile_tw_redirector;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
